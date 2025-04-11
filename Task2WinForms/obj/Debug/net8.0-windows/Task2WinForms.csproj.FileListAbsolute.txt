@@ -1,0 +1,17 @@
+C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\bin\Debug\net8.0-windows\Task2WinForms.exe
+C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\bin\Debug\net8.0-windows\Task2WinForms.deps.json
+C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\bin\Debug\net8.0-windows\Task2WinForms.runtimeconfig.json
+C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\bin\Debug\net8.0-windows\Task2WinForms.dll
+C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\bin\Debug\net8.0-windows\Task2WinForms.pdb
+C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.Form1.resources
+C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.csproj.GenerateResource.cache
+C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.AssemblyInfoInputs.cache
+C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.AssemblyInfo.cs
+C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.csproj.CoreCompileInputs.cache
+C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.dll
+C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\obj\Debug\net8.0-windows\refint\Task2WinForms.dll
+C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.pdb
+C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.genruntimeconfig.cache
+C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\obj\Debug\net8.0-windows\ref\Task2WinForms.dll
+C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.VialControl.resources
