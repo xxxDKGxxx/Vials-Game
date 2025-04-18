@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             newGameToolStripMenuItem = new ToolStripMenuItem();
@@ -36,13 +35,16 @@
             exitGameToolStripMenuItem = new ToolStripMenuItem();
             settingsToolStripMenuItem = new ToolStripMenuItem();
             openSettingsToolStripMenuItem = new ToolStripMenuItem();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            vialControl4 = new VialControl();
-            vialControl3 = new VialControl();
-            vialControl2 = new VialControl();
-            vialControl1 = new VialControl();
+            gameAreapanel = new Panel();
+            bottomPanel = new Panel();
+            winLabel = new Label();
+            scoreLabel = new Label();
+            bestScoreLabel = new Label();
+            undosLeftLabel = new Label();
+            nextGameButton = new Button();
+            undoButton = new Button();
             menuStrip1.SuspendLayout();
-            tableLayoutPanel1.SuspendLayout();
+            bottomPanel.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -64,20 +66,23 @@
             // newGameToolStripMenuItem
             // 
             newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            newGameToolStripMenuItem.Size = new Size(132, 22);
+            newGameToolStripMenuItem.Size = new Size(180, 22);
             newGameToolStripMenuItem.Text = "New Game";
+            newGameToolStripMenuItem.Click += newGameToolStripMenuItem_Click;
             // 
             // surrenderToolStripMenuItem
             // 
             surrenderToolStripMenuItem.Name = "surrenderToolStripMenuItem";
-            surrenderToolStripMenuItem.Size = new Size(132, 22);
-            surrenderToolStripMenuItem.Text = "Surrender";
+            surrenderToolStripMenuItem.Size = new Size(180, 22);
+            surrenderToolStripMenuItem.Text = "End Game";
+            surrenderToolStripMenuItem.Click += surrenderToolStripMenuItem_Click;
             // 
             // exitGameToolStripMenuItem
             // 
             exitGameToolStripMenuItem.Name = "exitGameToolStripMenuItem";
-            exitGameToolStripMenuItem.Size = new Size(132, 22);
+            exitGameToolStripMenuItem.Size = new Size(180, 22);
             exitGameToolStripMenuItem.Text = "Exit Game";
+            exitGameToolStripMenuItem.Click += exitGameToolStripMenuItem_Click;
             // 
             // settingsToolStripMenuItem
             // 
@@ -91,92 +96,97 @@
             openSettingsToolStripMenuItem.Name = "openSettingsToolStripMenuItem";
             openSettingsToolStripMenuItem.Size = new Size(157, 22);
             openSettingsToolStripMenuItem.Text = "Open Settings...";
+            openSettingsToolStripMenuItem.Click += openSettingsToolStripMenuItem_Click;
             // 
-            // tableLayoutPanel1
+            // gameAreapanel
             // 
-            tableLayoutPanel1.ColumnCount = 4;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.Controls.Add(vialControl4, 3, 0);
-            tableLayoutPanel1.Controls.Add(vialControl3, 2, 0);
-            tableLayoutPanel1.Controls.Add(vialControl2, 1, 0);
-            tableLayoutPanel1.Controls.Add(vialControl1, 0, 0);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 24);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(784, 437);
-            tableLayoutPanel1.TabIndex = 1;
+            gameAreapanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            gameAreapanel.Location = new Point(3, 21);
+            gameAreapanel.Name = "gameAreapanel";
+            gameAreapanel.Size = new Size(781, 353);
+            gameAreapanel.TabIndex = 1;
             // 
-            // vialControl4
+            // bottomPanel
             // 
-            vialControl4.AllowDrop = true;
-            vialControl4.Anchor = AnchorStyles.None;
-            vialControl4.InitSegmentCount = 3;
-            vialControl4.Location = new Point(661, 143);
-            vialControl4.MaxSegments = 4;
-            vialControl4.Name = "vialControl4";
-            vialControl4.Size = new Size(50, 150);
-            vialControl4.TabIndex = 3;
-            vialControl4.DragDrop += vialControl1_DragDrop;
-            vialControl4.DragEnter += vialControl1_DragEnter;
-            vialControl4.MouseClick += vialControl1_MouseClick;
-            vialControl4.MouseDown += vialControl1_MouseDown;
+            bottomPanel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            bottomPanel.Controls.Add(winLabel);
+            bottomPanel.Controls.Add(scoreLabel);
+            bottomPanel.Controls.Add(bestScoreLabel);
+            bottomPanel.Controls.Add(undosLeftLabel);
+            bottomPanel.Controls.Add(nextGameButton);
+            bottomPanel.Controls.Add(undoButton);
+            bottomPanel.Location = new Point(3, 380);
+            bottomPanel.Name = "bottomPanel";
+            bottomPanel.Size = new Size(781, 80);
+            bottomPanel.TabIndex = 2;
             // 
-            // vialControl3
+            // winLabel
             // 
-            vialControl3.AllowDrop = true;
-            vialControl3.Anchor = AnchorStyles.None;
-            vialControl3.InitSegmentCount = 3;
-            vialControl3.Location = new Point(465, 143);
-            vialControl3.MaxSegments = 4;
-            vialControl3.Name = "vialControl3";
-            vialControl3.Size = new Size(50, 150);
-            vialControl3.TabIndex = 2;
-            vialControl3.DragDrop += vialControl1_DragDrop;
-            vialControl3.DragEnter += vialControl1_DragEnter;
-            vialControl3.MouseClick += vialControl1_MouseClick;
-            vialControl3.MouseDown += vialControl1_MouseDown;
+            winLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            winLabel.Font = new Font("Showcard Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            winLabel.Location = new Point(551, 30);
+            winLabel.Name = "winLabel";
+            winLabel.Size = new Size(137, 42);
+            winLabel.TabIndex = 5;
             // 
-            // vialControl2
+            // scoreLabel
             // 
-            vialControl2.AllowDrop = true;
-            vialControl2.Anchor = AnchorStyles.None;
-            vialControl2.InitSegmentCount = 3;
-            vialControl2.Location = new Point(269, 143);
-            vialControl2.MaxSegments = 4;
-            vialControl2.Name = "vialControl2";
-            vialControl2.Size = new Size(50, 150);
-            vialControl2.TabIndex = 1;
-            vialControl2.DragDrop += vialControl1_DragDrop;
-            vialControl2.DragEnter += vialControl1_DragEnter;
-            vialControl2.MouseClick += vialControl1_MouseClick;
-            vialControl2.MouseDown += vialControl1_MouseDown;
+            scoreLabel.AutoSize = true;
+            scoreLabel.Location = new Point(159, 50);
+            scoreLabel.Name = "scoreLabel";
+            scoreLabel.Size = new Size(38, 15);
+            scoreLabel.TabIndex = 4;
+            scoreLabel.Text = "label2";
             // 
-            // vialControl1
+            // bestScoreLabel
             // 
-            vialControl1.AllowDrop = true;
-            vialControl1.Anchor = AnchorStyles.None;
-            vialControl1.InitSegmentCount = 3;
-            vialControl1.Location = new Point(73, 143);
-            vialControl1.MaxSegments = 4;
-            vialControl1.Name = "vialControl1";
-            vialControl1.Size = new Size(50, 150);
-            vialControl1.TabIndex = 0;
-            vialControl1.DragDrop += vialControl1_DragDrop;
-            vialControl1.DragEnter += vialControl1_DragEnter;
-            vialControl1.MouseClick += vialControl1_MouseClick;
-            vialControl1.MouseDown += vialControl1_MouseDown;
+            bestScoreLabel.AutoSize = true;
+            bestScoreLabel.Location = new Point(159, 9);
+            bestScoreLabel.Name = "bestScoreLabel";
+            bestScoreLabel.Size = new Size(38, 15);
+            bestScoreLabel.TabIndex = 3;
+            bestScoreLabel.Text = "label1";
+            // 
+            // undosLeftLabel
+            // 
+            undosLeftLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            undosLeftLabel.Font = new Font("Segoe UI", 6.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            undosLeftLabel.Location = new Point(18, 52);
+            undosLeftLabel.Name = "undosLeftLabel";
+            undosLeftLabel.Size = new Size(75, 28);
+            undosLeftLabel.TabIndex = 2;
+            undosLeftLabel.Text = "label1";
+            undosLeftLabel.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // nextGameButton
+            // 
+            nextGameButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            nextGameButton.Location = new Point(694, 30);
+            nextGameButton.Name = "nextGameButton";
+            nextGameButton.Size = new Size(75, 23);
+            nextGameButton.TabIndex = 1;
+            nextGameButton.Text = "Next Game";
+            nextGameButton.UseVisualStyleBackColor = true;
+            nextGameButton.Click += nextGameButton_Click;
+            // 
+            // undoButton
+            // 
+            undoButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            undoButton.Location = new Point(18, 26);
+            undoButton.Name = "undoButton";
+            undoButton.Size = new Size(75, 23);
+            undoButton.TabIndex = 0;
+            undoButton.Text = "Undo";
+            undoButton.UseVisualStyleBackColor = true;
+            undoButton.Click += undoButton_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(784, 461);
-            Controls.Add(tableLayoutPanel1);
+            Controls.Add(bottomPanel);
+            Controls.Add(gameAreapanel);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             MinimumSize = new Size(500, 300);
@@ -185,7 +195,8 @@
             Text = "Potion Master";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            tableLayoutPanel1.ResumeLayout(false);
+            bottomPanel.ResumeLayout(false);
+            bottomPanel.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -199,10 +210,13 @@
         private ToolStripMenuItem exitGameToolStripMenuItem;
         private ToolStripMenuItem settingsToolStripMenuItem;
         private ToolStripMenuItem openSettingsToolStripMenuItem;
-        private TableLayoutPanel tableLayoutPanel1;
-        private VialControl vialControl4;
-        private VialControl vialControl3;
-        private VialControl vialControl2;
-        private VialControl vialControl1;
+        private Panel gameAreapanel;
+        private Panel bottomPanel;
+        private Button undoButton;
+        private Button nextGameButton;
+        private Label undosLeftLabel;
+        private Label scoreLabel;
+        private Label bestScoreLabel;
+        private Label winLabel;
     }
 }

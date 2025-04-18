@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Task2WinForms")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+844cae436fd1fe738f92baee99641cb50fa9dd1e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Task2WinForms")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Task2WinForms")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

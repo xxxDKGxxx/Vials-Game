@@ -15,3 +15,23 @@ C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\obj\Debug\net8.0-wi
 C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.genruntimeconfig.cache
 C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\obj\Debug\net8.0-windows\ref\Task2WinForms.dll
 C:\Users\zielinskid\source\repos\Task2WinForms\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.VialControl.resources
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\bin\Debug\net8.0-windows\Task2WinForms.exe
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\bin\Debug\net8.0-windows\Task2WinForms.deps.json
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\bin\Debug\net8.0-windows\Task2WinForms.runtimeconfig.json
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\bin\Debug\net8.0-windows\Task2WinForms.dll
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\bin\Debug\net8.0-windows\Task2WinForms.pdb
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.Form1.resources
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.VialControl.resources
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.csproj.GenerateResource.cache
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.AssemblyInfoInputs.cache
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.AssemblyInfo.cs
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.csproj.CoreCompileInputs.cache
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.sourcelink.json
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.dll
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\obj\Debug\net8.0-windows\refint\Task2WinForms.dll
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.pdb
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.genruntimeconfig.cache
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\obj\Debug\net8.0-windows\ref\Task2WinForms.dll
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\obj\Debug\net8.0-windows\Task2WinForms.Settings_Dialog.resources
+C:\Users\Dominik Zieliński\Source\Repos\PwSG_25L_01189183_WinForms-Lab2\Task2WinForms\bin\Debug\net8.0-windows\Task2WinForms.dll.config
