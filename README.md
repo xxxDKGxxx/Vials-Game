@@ -6,7 +6,7 @@ The primary components of the project include:
 
 - A form-based UI consisting of Vials, Next Game/Undo Buttons, Score/Best Score counter, Menu Strip and Text Box for feedback on current game state.
 - Custom VialControl derived from UserControl that gives an independant interface for a Vial mechanic
-- Cusstom Settings Dialog that allows user to change game settings
+- Custom Settings Dialog that allows user to change game settings
 - Custom event handler for signaling drag-drop events on vials
 - Error checking and data validation for each input form
 
