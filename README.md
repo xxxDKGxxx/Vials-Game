@@ -15,8 +15,8 @@ The primary components of the project include:
 - **Controlling game settings** (Difficulty, Vials Count, Segment Count, Color Theme) that are **saved** between app instances.
 - **Undo** mechanics (limited number of undos for different Diffuculties).
 - **Score** counting mechanics **dependant** on Difficulty, Segment Count and Vials Count.
-- **Color Themes** (Light/Dark).
-- **Best score** tracking
+- **Color Themes** (Light/Dark) that change the appearance of different game components.
+- **Best score** tracking throughout app instances.
   
 ## Technologies
 
