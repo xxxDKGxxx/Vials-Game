@@ -66,21 +66,21 @@
             // newGameToolStripMenuItem
             // 
             newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            newGameToolStripMenuItem.Size = new Size(180, 22);
+            newGameToolStripMenuItem.Size = new Size(132, 22);
             newGameToolStripMenuItem.Text = "New Game";
             newGameToolStripMenuItem.Click += newGameToolStripMenuItem_Click;
             // 
             // surrenderToolStripMenuItem
             // 
             surrenderToolStripMenuItem.Name = "surrenderToolStripMenuItem";
-            surrenderToolStripMenuItem.Size = new Size(180, 22);
+            surrenderToolStripMenuItem.Size = new Size(132, 22);
             surrenderToolStripMenuItem.Text = "End Game";
             surrenderToolStripMenuItem.Click += surrenderToolStripMenuItem_Click;
             // 
             // exitGameToolStripMenuItem
             // 
             exitGameToolStripMenuItem.Name = "exitGameToolStripMenuItem";
-            exitGameToolStripMenuItem.Size = new Size(180, 22);
+            exitGameToolStripMenuItem.Size = new Size(132, 22);
             exitGameToolStripMenuItem.Text = "Exit Game";
             exitGameToolStripMenuItem.Click += exitGameToolStripMenuItem_Click;
             // 

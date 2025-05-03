@@ -15,7 +15,18 @@ namespace Task2WinForms
 
         public DifficultyType difficulty
         {
-            get => (DifficultyType)difficultyComboBox.SelectedItem;
+            get
+            {
+                if (difficultyComboBox.SelectedItem is DifficultyType)
+                {
+                    return (DifficultyType)difficultyComboBox.SelectedItem;
+                }
+                else
+                {
+                    this.difficulty = DifficultyType.Easy;
+                    return this.difficulty;
+                }
+            }
             set => difficultyComboBox.SelectedItem = value;
         }
 

@@ -119,7 +119,6 @@ namespace Task2WinForms
             }
         }
 
-
         public AppSettings(DifficultyType difficultyType, ColorTheme colorTheme, int vialsCount, int segmentsCount)
         {
             SetValues(difficultyType, colorTheme, vialsCount, segmentsCount);

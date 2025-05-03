@@ -119,6 +119,7 @@ namespace Task2WinForms
         }
 
 
+
         /// <summary>
         /// Event raised when initial segment count is changed
         /// </summary>

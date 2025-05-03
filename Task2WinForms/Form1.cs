@@ -100,16 +100,31 @@ namespace Task2WinForms
             applyColor();
         }
 
-
         private void validateSettings()
         {
-            Settings_Dialog dlg = new Settings_Dialog();
-            if(Properties.Settings.Default.difficultyType < 0 || Properties.Settings.Default.difficultyType > 2 ||
-                Properties.Settings.Default.colorTheme < 0 || Properties.Settings.Default.colorTheme > 1 ||
-                Properties.Settings.Default.vialsCount < dlg.MinVialsCount || Properties.Settings.Default.vialsCount > dlg.MaxVialsCount ||
-                Properties.Settings.Default.segmentsCount < dlg.MinSegmentCount || Properties.Settings.Default.segmentsCount > dlg.MaxSegmentCount)
+            try
             {
-                Properties.Settings.Default.Reset();
+                Settings_Dialog dlg = new Settings_Dialog();
+                if (Properties.Settings.Default.difficultyType < 0 || Properties.Settings.Default.difficultyType > 2 ||
+                    Properties.Settings.Default.colorTheme < 0 || Properties.Settings.Default.colorTheme > 1 ||
+                    Properties.Settings.Default.vialsCount < dlg.MinVialsCount || Properties.Settings.Default.vialsCount > dlg.MaxVialsCount ||
+                    Properties.Settings.Default.segmentsCount < dlg.MinSegmentCount || Properties.Settings.Default.segmentsCount > dlg.MaxSegmentCount)
+                {
+                    Properties.Settings.Default.Reset();
+                }
+                dlg.Dispose();
+            }
+            catch
+            {
+                try
+                {
+                    Properties.Settings.Default.Reset();
+                }
+                catch
+                {
+                    MessageBox.Show("user.config file is broken, please remove it manually from your AppData\\Local\\ folder.", "Error", MessageBoxButtons.OK);
+                    Environment.Exit(0);
+                }
             }
         }
 
@@ -159,7 +174,7 @@ namespace Task2WinForms
                 var serialized = File.ReadAllText(bestScoreFileName);
                 bestScore = (int ?)JsonSerializer.Deserialize(serialized, typeof(int)) ?? 0;
             }
-            catch(FileNotFoundException)
+            catch
             {
                 bestScore = 0;
                 return;
@@ -219,6 +234,8 @@ namespace Task2WinForms
             } while (hasWon == true);
             UndoManager.Instance.Reset();
             hasWonChanged += Form1_hasWonChanged;
+            hasWon = false;
+            Segments_ListChanged(this, new ListChangedEventArgs(ListChangedType.ItemChanged, 0));
         }
 
         private void Form1_scoreChanged(object? sender, PropertyChangedEventArgs e)
@@ -249,6 +266,8 @@ namespace Task2WinForms
             undosLeft = appSettings.Undo;
         }
 
+
+        // Source: https://stackoverflow.com/questions/359612/how-to-convert-rgb-color-to-hsv?fbclid=IwZXh0bgNhZW0CMTEAAR6dVwv_EEKmCJ65TuIDgmvwZ-miJD5_uwp1xR78qXbN6T9FX54yU5yjlxsEhQ_aem_9CH2PsA1buoyySiE1XOluQ
         public static Color FromHSV(double hue, double saturation, double value)
         {
             int hi = Convert.ToInt32(Math.Floor(hue / 60)) % 6;
@@ -279,7 +298,7 @@ namespace Task2WinForms
             {
                 for (int j = 0; j < appSettings.SegmentsCount; j++)
                 {
-                    var color = FromHSV(360f / (appSettings.VialsCount - appSettings.Empty) * i, 0.9f, 0.9f);
+                    var color = FromHSV(360f / (appSettings.VialsCount - appSettings.Empty) * i, 1f, 1f);
                     colors.Add(color);
                 }
 

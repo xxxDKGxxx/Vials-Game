@@ -130,11 +130,11 @@
             VialsCountnumericUpDown.Anchor = AnchorStyles.None;
             VialsCountnumericUpDown.Location = new Point(143, 101);
             VialsCountnumericUpDown.Maximum = new decimal(new int[] { 25, 0, 0, 0 });
-            VialsCountnumericUpDown.Minimum = new decimal(new int[] { 4, 0, 0, 0 });
+            VialsCountnumericUpDown.Minimum = new decimal(new int[] { 5, 0, 0, 0 });
             VialsCountnumericUpDown.Name = "VialsCountnumericUpDown";
             VialsCountnumericUpDown.Size = new Size(200, 23);
             VialsCountnumericUpDown.TabIndex = 6;
-            VialsCountnumericUpDown.Value = new decimal(new int[] { 4, 0, 0, 0 });
+            VialsCountnumericUpDown.Value = new decimal(new int[] { 5, 0, 0, 0 });
             VialsCountnumericUpDown.ValueChanged += VialsCountnumericUpDown_ValueChanged;
             // 
             // tableLayoutPanel2
@@ -229,9 +229,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(389, 226);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Settings_Dialog";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Settings";
+            TopMost = true;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)SegmentCountnumericUpDown).EndInit();

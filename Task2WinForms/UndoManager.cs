@@ -27,7 +27,6 @@ namespace Task2WinForms
         /// </summary>
         private Stack<(VialControl from, VialControl to, int amount)> _stack;
         
-        
         /// <summary>
         /// Static property used to retrieve the Singleton instance
         /// </summary>
@@ -47,6 +46,7 @@ namespace Task2WinForms
         /// <summary>
         /// Performs undo logic on last two Vial drag-drop
         /// </summary>
+        /// <returns>Bool indicating whether the undo succeeded</returns>
         public bool Undo()
         {
             if (_stack.Count == 0) return false;
